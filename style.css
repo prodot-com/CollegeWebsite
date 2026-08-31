@@ -189,6 +189,55 @@ a {
     outline: none;
 }
 
+.site-footer {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto 28px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    border: 1px solid #d5ecfb;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 12px 34px rgba(18, 85, 130, 0.1);
+}
+
+.site-footer p {
+    margin: 0;
+    color: #506b82;
+    font-weight: 600;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #0d79bd;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.github-link svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.github-link:hover,
+.github-link:focus {
+    transform: translateY(-2px);
+    background: #095d92;
+    box-shadow: 0 12px 24px rgba(13, 121, 189, 0.22);
+    outline: none;
+}
+
 @media (max-width: 900px) {
     .course-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -218,5 +267,12 @@ a {
 
     .course-card {
         min-height: 112px;
+    }
+
+    .site-footer {
+        width: min(100% - 22px, 1120px);
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 16px;
     }
 }
